@@ -1,0 +1,21 @@
+操作系统版本：Windows 11 专业版 64-bit
+编辑器版本：Visual Studio 2022 Community 17.14
+编译器版本：MSVC 19.44 x86-64（Visual Studio 2022）
+C++标准版本：C++17
+
+编译说明（MSVC）：
+1. 打开「x64 本机工具命令提示符」（或 VS 开发者命令提示符）
+2. cd 进入本文件夹（所有 cpp/hpp 所在目录）
+3. 执行以下命令（源码为 UTF-8 编码，需加 /utf-8）：
+
+cl /EHsc /std:c++17 /utf-8 /Fe:ProjectScheduler.exe ^
+main.cpp Task.cpp BasicTask.cpp MilestoneTask.cpp DependencyType.cpp ^
+Dependency.cpp Resource.cpp TaskResourceAssignment.cpp Project.cpp ^
+PpmImporter.cpp PpmExporter.cpp ProjectController.cpp ConsoleView.cpp
+
+运行说明：
+1. 运行前在控制台执行 chcp 65001，可正确显示中文菜单
+2. 导入 PPM 时建议输入文件名 simple.PPM（与可执行文件同目录）
+3. 本提交包仅含源码，不含可执行文件、工程文件及中间文件
+
+提交前请将本文件夹重命名为你的学号。
